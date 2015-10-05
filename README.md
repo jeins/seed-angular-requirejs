@@ -1,1 +1,1 @@
-# seed-angular-requirejss
+# seed-angular-requirejs
