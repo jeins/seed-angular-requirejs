@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- META -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+		<title>Seed Angular-RequireJs</title>
+
+		<!-- LOAD CSS -->
+		<link rel="stylesheet" href="lib/bootstrap-css/css/bootstrap.min">
+
+	</head>
+	<!-- SET THE MAIN CONTROLLER -->
+	<body ng-controller="CtrlMain">
+
+		<div layout="column" class="ui-view-container" layout-fill ui-view></div>
+
+		<!-- LOAD RequireJS -->
+    	<script src="lib/requirejs/require.js" data-main="app/main"></script>
+	</body>
+</html>

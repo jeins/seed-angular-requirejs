@@ -1,0 +1,13 @@
+{
+  "name": "Seed Angular-Requirejs",
+  "version": "1.0.0",
+  "description": "AngularJs-RequireJs Seed",
+  "dependencies" : {
+    "requirejs": "*",
+
+    "angular": "1.4.*",
+    "angular-route": "*",
+    "angular-bootstrap": "~0.13.4",
+    "bootstrap-css": "~3.3.*"
+  }
+}
