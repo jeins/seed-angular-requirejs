@@ -1,11 +1,13 @@
 define([
-    'angular', 'angular.route', 'angular.ui-bootstrap',
-    'app.config'
+    'angular', 'app', 'angular.route', 'angular.ui-bootstrap',
+    './config', 
+    './_common/app.common', './_common/app.common.req',
+    './home/app.home', './home/app.home.req'
 ], function (angular) {
 
-    var app = angular.module("app", [
+    var app = angular.module("myApp", [
         'ngRoute', 'ui.bootstrap',
-        'app.config'
+        'app.config', 'app.common', 'app.home'
     ]);
 
     app.config(['$locationProvider', '$routeProvider', 'CONFIG', function ($locationProvider, $routeProvider, CONFIG) {
@@ -18,9 +20,7 @@ define([
             })
             .otherwise({redirectTo: "/"});
     }]);
+   
 
-    app.run();
-    }]);
-
-    return angular.bootstrap(app);
+    return app;
 });

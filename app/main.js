@@ -1,6 +1,6 @@
 require.config({
     paths: {
-        'app': 'app/app',
+        'app': './app',
 
         'angular': '../lib/angular/angular',
         'angular.ui-bootstrap': '../lib/angular-bootstrap/ui-bootstrap.min',
@@ -16,8 +16,13 @@ require.config({
         'angular.ui-bootstrap': {
             deps : ['angular']
         }
-    },
-
-    // kick start application
-    deps: ['app']
+    }
 });
+
+require(['angular', 'app'], function(angular, app){
+    var $html = angular.element(document.getElementsByTagName('html')[0]);
+        angular.element().ready(function() {
+            // bootstrap the app manually
+            angular.bootstrap(document, ['myApp']);
+        }, false);
+})

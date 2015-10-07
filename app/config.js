@@ -5,7 +5,7 @@ define(['angular'], function (angular) {
 
     config.constant('CONFIG', {
         'init': {
-            'appPath': 'public/app/'
+            'appPath': 'app/'
         }
     })
 
