@@ -4,7 +4,7 @@ define(['../app.home'], function(app){
 		var name = 'CtrlHome';
 		var dependencies = ['$scope'];
 		var controller = function($scope){
-			var CHome = this;
+			var CHome = this;console.log("HOME");
 		} 
 		app.controller(name, dependencies.concat(controller));
 	})

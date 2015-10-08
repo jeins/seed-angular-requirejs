@@ -1,26 +1,25 @@
 define([
-    'angular', 'app', 'angular.route', 'angular.ui-bootstrap',
+    'angular', 'app', 'angular.ui-router',
     './config', 
     './_common/app.common', './_common/app.common.req',
     './home/app.home', './home/app.home.req'
 ], function (angular) {
 
-    var app = angular.module("myApp", [
-        'ngRoute', 'ui.bootstrap',
+    var app = angular.module('app', [
+        'ui.router', 
         'app.config', 'app.common', 'app.home'
     ]);
 
-    app.config(['$locationProvider', '$routeProvider', 'CONFIG', function ($locationProvider, $routeProvider, CONFIG) {
-        $locationProvider.html5Mode(true);
-
-        $routeProvider
-            .when("/", {
-                templateUrl: CONFIG.init.appPath + '/home/home.html',
-                controller: function(){},
+    app.config(['$urlRouterProvider', '$stateProvider', 'CONFIG', function ($urlRouterProvider, $stateProvider, CONFIG) {
+        $urlRouterProvider.otherwise('/');
+        $stateProvider
+            .state('home', {
+                url: '/',
+                templateUrl: 'app/home/templates/home.html',
+                controller: 'CtrlHome as vm'
             })
-            .otherwise({redirectTo: "/"});
     }]);
    
-
+    app.run();
     return app;
 });

@@ -6,8 +6,8 @@
     "requirejs": "*",
 
     "angular": "1.4.*",
-    "angular-route": "*",
     "angular-bootstrap": "~0.13.4",
-    "bootstrap-css": "~3.3.*"
+    "bootstrap-css": "~3.3.*",
+    "angular-ui-router": "~0.2.15"
   }
 }
