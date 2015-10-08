@@ -10,14 +10,9 @@ define([
         'app.config', 'app.common', 'app.home'
     ]);
 
-    app.config(['$urlRouterProvider', '$stateProvider', 'CONFIG', function ($urlRouterProvider, $stateProvider, CONFIG) {
+    app.config(['$urlRouterProvider', '$locationProvider', function ($urlRouterProvider, $locationProvider) {
+        $locationProvider.html5Mode(true).hashPrefix('!');
         $urlRouterProvider.otherwise('/');
-        $stateProvider
-            .state('home', {
-                url: '/',
-                templateUrl: 'app/home/templates/home.html',
-                controller: 'CtrlHome as vm'
-            })
     }]);
    
     app.run();
